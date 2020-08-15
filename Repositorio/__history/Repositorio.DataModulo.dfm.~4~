@@ -1,0 +1,126 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 396
+  Width = 579
+  object con: TFDConnection
+    Params.Strings = (
+      'Database=C:\dev\Delphi\Comprovante Pagamento Salarial\DB.FDB'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Server=localhost'
+      'Port=3060'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+  end
+  object WaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 152
+    Top = 24
+  end
+  object FBDriver: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files (x86)\Firebird\Firebird_3_0\fbclient.dll'
+    Left = 96
+    Top = 24
+  end
+  object QryEmpresas: TFDQuery
+    CachedUpdates = True
+    Connection = con
+    SQL.Strings = (
+      'SELECT * FROM EMPRESAS')
+    Left = 32
+    Top = 104
+    object QryEmpresasID_EMPRESA: TLargeintField
+      FieldName = 'ID_EMPRESA'
+      Origin = 'ID_EMPRESA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QryEmpresasNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Required = True
+      Size = 80
+    end
+    object QryEmpresasENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Required = True
+      Size = 40
+    end
+    object QryEmpresasNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      Size = 5
+    end
+    object QryEmpresasBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Required = True
+      Size = 40
+    end
+    object QryEmpresasCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Origin = 'CNPJ'
+      Required = True
+      Size = 18
+    end
+  end
+  object QryCargos: TFDQuery
+    CachedUpdates = True
+    Connection = con
+    SQL.Strings = (
+      'SELECT * FROM CARGOS')
+    Left = 120
+    Top = 104
+    object QryCargosID_CARGO: TLargeintField
+      FieldName = 'ID_CARGO'
+      Origin = 'ID_CARGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QryCargosDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Required = True
+      Size = 60
+    end
+    object QryCargosID_EMPRESA: TLargeintField
+      FieldName = 'ID_EMPRESA'
+      Origin = 'ID_EMPRESA'
+      Required = True
+    end
+  end
+  object QryEventos: TFDQuery
+    CachedUpdates = True
+    Connection = con
+    SQL.Strings = (
+      'SELECT * FROM EVENTOS')
+    Left = 200
+    Top = 104
+    object QryEventosID_EVENTO: TLargeintField
+      FieldName = 'ID_EVENTO'
+      Origin = 'ID_EVENTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QryEventosDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Required = True
+      Size = 60
+    end
+    object QryEventosDESCONTOS: TIntegerField
+      FieldName = 'DESCONTOS'
+      Origin = 'DESCONTOS'
+      Required = True
+    end
+    object QryEventosID_EMPRESA: TLargeintField
+      FieldName = 'ID_EMPRESA'
+      Origin = 'ID_EMPRESA'
+      Required = True
+    end
+  end
+end
