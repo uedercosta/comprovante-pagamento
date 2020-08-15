@@ -1,0 +1,60 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Menu Principal'
+  ClientHeight = 317
+  ClientWidth = 541
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = mmMenu
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object mmMenu: TMainMenu
+    Left = 240
+    Top = 136
+    object Cadastros1: TMenuItem
+      Caption = 'Cadastros'
+      object Empresas1: TMenuItem
+        Action = act_CadEmpresa
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Cargos1: TMenuItem
+        Action = act_CadCargo
+      end
+      object Eventos1: TMenuItem
+        Action = act_CadEvento
+      end
+      object Funcionrios1: TMenuItem
+        Action = act_CadFuncionario
+      end
+    end
+  end
+  object act_Sistema: TActionList
+    Left = 72
+    Top = 192
+    object act_CadEmpresa: TAction
+      Category = 'Cadastros'
+      Caption = '&Empresas'
+    end
+    object act_CadFuncionario: TAction
+      Category = 'Cadastros'
+      Caption = '&Funcion'#225'rios'
+    end
+    object act_CadEvento: TAction
+      Category = 'Cadastros'
+      Caption = 'E&ventos'
+    end
+    object act_CadCargo: TAction
+      Category = 'Cadastros'
+      Caption = '&Cargos'
+    end
+  end
+end

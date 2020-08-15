@@ -1,0 +1,159 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 392
+  ClientWidth = 767
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RLReport1: TRLReport
+    Left = -1
+    Top = 8
+    Width = 794
+    Height = 1123
+    DataSource = ds
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 131
+      BandType = btHeader
+      object RLDraw1: TRLDraw
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 84
+        Align = faTop
+      end
+      object RLLabel1: TRLLabel
+        Left = 448
+        Top = 7
+        Width = 234
+        Height = 18
+        Caption = 'Recibo de Pagamento de S'#225'lario'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel2: TRLLabel
+        Left = 11
+        Top = 24
+        Width = 60
+        Height = 16
+        Caption = 'Empresa:'
+      end
+      object RLLabel3: TRLLabel
+        Left = 11
+        Top = 43
+        Width = 63
+        Height = 16
+        Caption = 'Endere'#231'o:'
+      end
+      object RLLabel4: TRLLabel
+        Left = 11
+        Top = 62
+        Width = 64
+        Height = 16
+        Caption = 'CNPJ/MF:'
+      end
+      object RLDBText1: TRLDBText
+        Left = 80
+        Top = 24
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 80
+        Top = 43
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText3: TRLDBText
+        Left = 80
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText4: TRLDBText
+        Left = 544
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel5: TRLLabel
+        Left = 544
+        Top = 40
+        Width = 117
+        Height = 16
+        Caption = 'M'#234's de Pagamento'
+      end
+      object RLLabel6: TRLLabel
+        Left = 568
+        Top = 64
+        Width = 8
+        Height = 16
+        Caption = '/'
+      end
+      object RLDBText5: TRLDBText
+        Left = 582
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+    end
+  end
+  object ds: TDataSource
+    Left = 23
+    Top = 176
+  end
+end

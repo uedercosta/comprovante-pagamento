@@ -1,0 +1,561 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 478
+  ClientWidth = 767
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RLReport1: TRLReport
+    Left = -1
+    Top = 8
+    Width = 794
+    Height = 1123
+    DataSource = ds
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 163
+      BandType = btHeader
+      object RLDraw1: TRLDraw
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 84
+        Align = faTop
+      end
+      object RLLabel1: TRLLabel
+        Left = 448
+        Top = 7
+        Width = 252
+        Height = 19
+        Caption = 'Recibo de Pagamento de S'#225'lario'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel2: TRLLabel
+        Left = 11
+        Top = 24
+        Width = 60
+        Height = 16
+        Caption = 'Empresa:'
+      end
+      object RLLabel3: TRLLabel
+        Left = 11
+        Top = 43
+        Width = 63
+        Height = 16
+        Caption = 'Endere'#231'o:'
+      end
+      object RLLabel4: TRLLabel
+        Left = 11
+        Top = 62
+        Width = 64
+        Height = 16
+        Caption = 'CNPJ/MF:'
+      end
+      object RLDBText1: TRLDBText
+        Left = 80
+        Top = 24
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 80
+        Top = 43
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText3: TRLDBText
+        Left = 80
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText4: TRLDBText
+        Left = 544
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel5: TRLLabel
+        Left = 544
+        Top = 40
+        Width = 117
+        Height = 16
+        Caption = 'M'#234's de Pagamento'
+      end
+      object RLLabel6: TRLLabel
+        Left = 568
+        Top = 64
+        Width = 8
+        Height = 16
+        Caption = '/'
+      end
+      object RLDBText5: TRLDBText
+        Left = 582
+        Top = 62
+        Width = 74
+        Height = 16
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDraw2: TRLDraw
+        Left = 0
+        Top = 86
+        Width = 718
+        Height = 48
+      end
+      object RLLabel7: TRLLabel
+        Left = 3
+        Top = 90
+        Width = 44
+        Height = 16
+        Caption = 'C'#243'digo'
+      end
+      object RLLabel8: TRLLabel
+        Left = 72
+        Top = 90
+        Width = 38
+        Height = 16
+        Caption = 'Nome'
+      end
+      object RLLabel9: TRLLabel
+        Left = 376
+        Top = 90
+        Width = 32
+        Height = 16
+        Caption = 'CBO'
+      end
+      object RLLabel10: TRLLabel
+        Left = 421
+        Top = 90
+        Width = 35
+        Height = 16
+        Caption = 'Emp.'
+      end
+      object RLLabel11: TRLLabel
+        Left = 470
+        Top = 90
+        Width = 35
+        Height = 16
+        Caption = 'Local'
+      end
+      object RLLabel12: TRLLabel
+        Left = 518
+        Top = 90
+        Width = 42
+        Height = 16
+        Caption = 'Depto.'
+      end
+      object RLLabel13: TRLLabel
+        Left = 573
+        Top = 90
+        Width = 35
+        Height = 16
+        Caption = 'Setor'
+      end
+      object RLLabel14: TRLLabel
+        Left = 622
+        Top = 90
+        Width = 41
+        Height = 16
+        Caption = 'Se'#231#227'o'
+      end
+      object RLLabel15: TRLLabel
+        Left = 676
+        Top = 90
+        Width = 36
+        Height = 16
+        Caption = 'Folha'
+      end
+      object RLDraw3: TRLDraw
+        Left = 0
+        Top = 139
+        Width = 718
+        Height = 23
+      end
+      object RLLabel16: TRLLabel
+        Left = 3
+        Top = 142
+        Width = 44
+        Height = 16
+        Caption = 'C'#243'digo'
+      end
+      object RLLabel17: TRLLabel
+        Left = 187
+        Top = 142
+        Width = 62
+        Height = 16
+        Caption = 'Descri'#231#227'o'
+      end
+      object RLLabel18: TRLLabel
+        Left = 347
+        Top = 142
+        Width = 65
+        Height = 16
+        Caption = 'Refer'#234'ncia'
+      end
+      object RLLabel19: TRLLabel
+        Left = 484
+        Top = 142
+        Width = 80
+        Height = 16
+        Caption = 'Vencimentos'
+      end
+      object RLLabel20: TRLLabel
+        Left = 641
+        Top = 142
+        Width = 66
+        Height = 16
+        Caption = 'Descontos'
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 201
+      Width = 718
+      Height = 29
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 230
+      Width = 718
+      Height = 248
+      BandType = btSummary
+      object RLDraw4: TRLDraw
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 95
+        Align = faTop
+      end
+      object RLDraw5: TRLDraw
+        Left = 568
+        Top = 0
+        Width = 150
+        Height = 48
+      end
+      object RLLabel21: TRLLabel
+        Left = 586
+        Top = 4
+        Width = 116
+        Height = 16
+        Caption = 'Total de Descontos'
+      end
+      object RLDraw6: TRLDraw
+        Left = 419
+        Top = 0
+        Width = 150
+        Height = 48
+      end
+      object RLLabel22: TRLLabel
+        Left = 429
+        Top = 4
+        Width = 130
+        Height = 16
+        Caption = 'Total de Vencimentos'
+      end
+      object RLDraw7: TRLDraw
+        Left = 419
+        Top = 47
+        Width = 150
+        Height = 48
+      end
+      object RLDraw8: TRLDraw
+        Left = 568
+        Top = 47
+        Width = 150
+        Height = 48
+      end
+      object RLImage1: TRLImage
+        Left = 504
+        Top = 58
+        Width = 62
+        Height = 27
+        Center = True
+        Picture.Data = {
+          0B546478504E47496D61676589504E470D0A1A0A0000000D49484452000000B0
+          0000004D080600000006BBEE99000000017352474200AECE1CE9000000046741
+          4D410000B18F0BFC6105000000097048597300000EC300000EC301C76FA86400
+          0005B349444154785EEDDD7F449D6F18C7F164995A52B2A44999CDCC2A252625
+          65664999659AFE68B6654A4A9A99924D3529D9CC3429B3994D524652B2493329
+          B3C992324B6649994D4A9A994DFACCC375DFFAAED5F754E7C7FD9CF37971ABCE
+          75FD71FE78ABD439CFE307221B63C086AAABABC3E4E4A47C455B61C086B202F6
+          F3F343696929E6E6E6E451FA1B0336940A589DEAEA6AACACACC89414066C2815
+          707C7CBC8E383434144D4D4DB24116066C2815B0F5716464043939393AE49898
+          18B4B5B5C9A66F63C086DA18B0D2DFDF8FB4B4341D724242023A3B3B65EA9B18
+          B0A1FE15B0D2D1D181B8B8381D727A7A3A06060664EA5B18B0A1B60B58696D6D
+          457474B40E39373717A3A3A332F50D0CD8508E046C595F5F4763632342424274
+          C8858585989A9A920DEFC6800DE568C0CAF2F232AAAAAA74C4D6292B2BC3FCFC
+          BC6C7827066CA89D06ACCCCECEA2A4A44447ECEFEF8F9A9A1AACAEAECA867761
+          C086DA6DC0CAC4C4040A0A0A74C8616161686E6E96A9F760C086DA6BC0CAF0F0
+          30B2B3B375C8B1B1B1686F6F97A9FD316043392B60A5AFAF0FA9A9A93AE4C4C4
+          44747575C9D4BE18B0A19C1DB0F2ECD9339C387142879C919181172F5EC8D47E
+          18B0A15C15B0F2E0C1031C3A7448877CF6EC59BC79F346A6F6C1800DE5EA802D
+          6B6B6B686868407070B00EF9E2C58BF8F0E1836C988F011BCA1D012B4B4B4BB8
+          71E3868ED83AE5E5E5585858900D736D0AF8F5EBD73C069CCB972FBB2D60E5F3
+          E7CF282E2ED611EFDBB70F376FDEC4F7EFDF65C33C9B02564F9EC78CE3CE8095
+          F1F1715CB870413F87F0F070DCB97347A666D932E0CCCC4C1E038E270256AC9F
+          04595959BA89C3870FE3E1C3873235C396011329BDBDBD484949D16D242525A1
+          BBBB5BA69EC580C9614F9F3EC5F1E3C77523D64F88972F5FCAD4331830ED584B
+          4B0BA2A2A2742BE7CE9DC3DBB76F65EA5E0C9876E5F7EFDFB87DFB3682828274
+          33972E5DC2C78F1F65C33D1830EDC9E2E222AE5FBFAEBBB14E454505BE7CF922
+          1BAEC580C9293E7DFA84AB57AFEA7E02020270EBD62DFCF8F143365C83019353
+          BD7FFF1EF9F9F9BAA383070FE2EEDDBB32753E064C2EF1EAD52B9C397346F774
+          E4C8113C7AF448A6CEC380C9A57A7A7A70F2E449DD557272329E3F7F2ED3BD63
+          C0E4164F9E3CC1B163C7745FA74E9DC2E0E0A04C778F01935BDDBF7F1F919191
+          BAB3BCBC3CBC7BF74EA63BC780C9ED7EFDFA85FAFA7A040606EADEAE5CB982E9
+          E969D9701C03268FF9F6ED1BAE5DBBA69BB34E656525BE7EFD2A1BFF8F0193C7
+          CDCCCCA0A8A848B7B77FFF7ED4D6D6E2E7CF9FB2B135064CC6181B1BC3F9F3E7
+          7583111111B877EF9E4CFF8D01937186868670FAF469DDE2D1A347F1F8F16399
+          FE1703266359EFD33B70E0806ED2FADC7A6C23064CC6E17760B225FE0E4CB6C4
+          BF42902DF1EFC0644BFC4F1CD9165F0B41B6C457A3912DF1F5C0644B7C4706D9
+          12DF1347B6C47725932DF1BA10644BBC320FD916AF8D46B6C4AB53922DD9F2FA
+          C01BAF12CEE3B9C32BB46F6FCB8079CC38BC47C6F63605BCF14E393C9E3BBC4B
+          9163F8CBAEA1AC70DD15B057DD278ECCE08E8079A74E72195707CC7B25934BB9
+          2A60DEAD9EDCC2D901F7F5F521353555879B989888AEAE2E99DA17033694B302
+          1E1E1E467676B60E37363616EDEDED32B53F066CA8BD063C3131818282021D6E
+          5858189A9B9B65EA3D18B0A1761BF0ECEC2C4A4A4A74B8FEFEFEA8A9A9C1EAEA
+          AA6C7817066CA89D06BCBCBC8CAAAA2A1DAE75CACACA303F3F2F1BDE89011BCA
+          D180D7D7D7D1D8D8889090101D6E616121A6A6A664C3BB3160433912706B6B2B
+          A2A3A375B8B9B9B9181D1D95A96F60C086DA2EE08E8E0EC4C5C5E970D3D3D331
+          30302053DFC2800DF5AF80FBFBFB919696A6C34D4848406767A74C7D130336D4
+          C680474646909393A3C38D8989415B5B9B6CFA36066C2815707C7CBC0E373434
+          144D4D4DB24116066C2815B03AD5D5D55859599129290CD8502AE0D2D252CCCD
+          CDC9A3F437066C282BE0C9C949F98AB6C280C9C6803FF66B2D4CE465FB890000
+          000049454E44AE426082}
+        Stretch = True
+      end
+      object RLMemo1: TRLMemo
+        Left = 423
+        Top = 62
+        Width = 82
+        Height = 16
+        Behavior = [beSiteExpander]
+        Lines.Strings = (
+          'Valor L'#237'quido')
+      end
+      object RLDraw9: TRLDraw
+        Left = 0
+        Top = 95
+        Width = 718
+        Height = 1
+        Align = faTop
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.Color = clWhite
+        Brush.Style = bsClear
+        DrawKind = dkCustom
+      end
+      object RLDraw10: TRLDraw
+        Left = 0
+        Top = 96
+        Width = 718
+        Height = 49
+        Align = faTop
+      end
+      object RLLabel23: TRLLabel
+        Left = 8
+        Top = 99
+        Width = 78
+        Height = 16
+        Caption = 'S'#225'lario Base'
+      end
+      object RLLabel24: TRLLabel
+        Left = 104
+        Top = 99
+        Width = 100
+        Height = 16
+        Caption = 'Sal. Contr. INSS'
+      end
+      object RLLabel25: TRLLabel
+        Left = 221
+        Top = 99
+        Width = 106
+        Height = 16
+        Caption = 'Base C'#225'lc. FGTS'
+      end
+      object RLLabel26: TRLLabel
+        Left = 345
+        Top = 99
+        Width = 85
+        Height = 16
+        Caption = 'FGTS do M'#234's'
+      end
+      object RLLabel27: TRLLabel
+        Left = 448
+        Top = 99
+        Width = 101
+        Height = 16
+        Caption = 'Base C'#225'lc. IRRF'
+      end
+      object RLLabel28: TRLLabel
+        Left = 641
+        Top = 99
+        Width = 69
+        Height = 16
+        Caption = 'Faixa IRRF'
+      end
+      object RLDraw11: TRLDraw
+        Left = 0
+        Top = 145
+        Width = 718
+        Height = 1
+        Align = faTop
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.Color = clWhite
+        Brush.Style = bsClear
+        DrawKind = dkCustom
+      end
+      object RLDraw12: TRLDraw
+        Left = 0
+        Top = 146
+        Width = 718
+        Height = 63
+      end
+      object RLLabel29: TRLLabel
+        Left = 11
+        Top = 148
+        Width = 477
+        Height = 15
+        Caption = 
+          'DECLARO TER RECEBIDO A IMPORT'#194'NCIA L'#205'QUIDA DISCRIMINADA NESTE RE' +
+          'CIBO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLLabel31: TRLLabel
+        Left = 47
+        Top = 193
+        Width = 32
+        Height = 14
+        Caption = 'DATA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLLabel32: TRLLabel
+        Left = 429
+        Top = 192
+        Width = 160
+        Height = 14
+        Caption = 'ASSINATURA DO FUNCION'#193'RIO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLDraw13: TRLDraw
+        Left = 312
+        Top = 186
+        Width = 385
+        Height = 9
+        DrawKind = dkLine
+      end
+      object RLDraw14: TRLDraw
+        Left = 8
+        Top = 186
+        Width = 134
+        Height = 9
+        DrawKind = dkLine
+      end
+      object RLLabel30: TRLLabel
+        Left = 51
+        Top = 171
+        Width = 6
+        Height = 15
+        Caption = '/'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLLabel33: TRLLabel
+        Left = 91
+        Top = 171
+        Width = 6
+        Height = 15
+        Caption = '/'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object ds: TDataSource
+    Left = 23
+    Top = 176
+  end
+end
