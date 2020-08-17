@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, RLReport, dxGDIPlusClasses;
 
 type
-  TForm2 = class(TForm)
+  TfrmRecibos = class(TForm)
     RLReport1: TRLReport;
     RLBand1: TRLBand;
     RLDraw1: TRLDraw;
@@ -77,7 +77,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  frmRecibos: TfrmRecibos;
 
 implementation
 

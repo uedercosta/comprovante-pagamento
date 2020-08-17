@@ -1,0 +1,33 @@
+program ComprovantePagamento;
+
+uses
+  Vcl.Forms,
+  View.MenuPrincipal in 'View\View.MenuPrincipal.pas' {frmMenu},
+  View.Padrao in 'View\Padrao\View.Padrao.pas' {FrmPadrao},
+  Repositorio.DataModulo in 'Repositorio\Repositorio.DataModulo.pas' {DM: TDataModule},
+  Relatorio.ReciboPagamento in 'Relatorios\Relatorio.ReciboPagamento.pas' {frmRecibos},
+  View.Login in 'View\View.Login.pas' {frmLogin},
+  Util.UAssertionErro in 'Util\Util.UAssertionErro.pas',
+  Util.Utilitarios in 'Util\Util.Utilitarios.pas',
+  Util.VerificaException in 'Util\Util.VerificaException.pas',
+  View.Padrao.Cadastros in 'View\Padrao\View.Padrao.Cadastros.pas' {frmCadastroSimples},
+  View.Cadastros.Empresas in 'View\Cadastros\View.Cadastros.Empresas.pas' {frmCadEmpresas},
+  View.Cadastros.Funcionarios in 'View\Cadastros\View.Cadastros.Funcionarios.pas' {frmCadFuncionario},
+  View.Cadastros.Cargos in 'View\Cadastros\View.Cadastros.Cargos.pas' {frmCadCargos},
+  View.Cadastros.Eventos in 'View\Cadastros\View.Cadastros.Eventos.pas' {frmCadastroSimples1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TfrmMenu, frmMenu);
+  Application.CreateForm(TFrmPadrao, FrmPadrao);
+  Application.CreateForm(TfrmCadastroSimples, frmCadastroSimples);
+  Application.CreateForm(TfrmCadEmpresas, frmCadEmpresas);
+  Application.CreateForm(TfrmCadFuncionario, frmCadFuncionario);
+  Application.CreateForm(TfrmCadCargos, frmCadCargos);
+  Application.CreateForm(TfrmCadastroSimples1, frmCadastroSimples1);
+  Application.Run;
+end.

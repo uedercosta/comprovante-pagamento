@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frmMenu: TfrmMenu
   Left = 0
   Top = 0
   Caption = 'Menu Principal'
@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Style = []
   Menu = mmMenu
   OldCreateOrder = False
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -35,9 +36,6 @@ object Form1: TForm1
       item
         Width = 50
       end>
-    ExplicitLeft = 368
-    ExplicitTop = 216
-    ExplicitWidth = 0
   end
   object mmMenu: TMainMenu
     Left = 240
@@ -87,7 +85,7 @@ object Form1: TForm1
         Action = act_TrocarSenha
       end
       object actLogoff1: TMenuItem
-        Action = act_Logoff
+        Caption = 'Trocar de Usu'#225'rio'
       end
     end
     object actSair1: TMenuItem
@@ -100,18 +98,22 @@ object Form1: TForm1
     object act_CadEmpresa: TAction
       Category = 'Cadastros'
       Caption = '&Empresas'
+      OnExecute = act_CadEmpresaExecute
     end
     object act_CadFuncionario: TAction
       Category = 'Cadastros'
       Caption = '&Funcion'#225'rios'
+      OnExecute = act_CadFuncionarioExecute
     end
     object act_CadEvento: TAction
       Category = 'Cadastros'
       Caption = 'E&ventos'
+      OnExecute = act_CadEventoExecute
     end
     object act_CadCargo: TAction
       Category = 'Cadastros'
       Caption = '&Cargos'
+      OnExecute = act_CadCargoExecute
     end
     object act_CadUsuarios: TAction
       Category = 'Utilit'#225'rios'
@@ -121,16 +123,13 @@ object Form1: TForm1
       Category = 'Utilit'#225'rios'
       Caption = 'Acessos ao Sistema'
     end
-    object act_Logoff: TAction
-      Category = 'Utilit'#225'rios'
-      Caption = 'Trocar de Usu'#225'rio'
-    end
     object act_TrocarSenha: TAction
       Category = 'Utilit'#225'rios'
       Caption = 'Trocar Senha'
     end
     object act_Sair: TAction
       Caption = 'S&air'
+      OnExecute = act_SairExecute
     end
     object act_CadPerfil: TAction
       Category = 'Utilit'#225'rios'
@@ -143,6 +142,17 @@ object Form1: TForm1
     object act_ImpressaoRecibos: TAction
       Category = 'Utilit'#225'rios'
       Caption = 'I&mpress'#227'o dos Recibos'
+      OnExecute = act_ImpressaoRecibosExecute
     end
+  end
+  object EvFocusColor1: TEvFocusColor
+    Color = 12582911
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    Left = 88
+    Top = 56
   end
 end

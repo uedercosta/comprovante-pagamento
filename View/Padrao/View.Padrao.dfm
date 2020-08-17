@@ -1,9 +1,10 @@
 object FrmPadrao: TFrmPadrao
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'FrmPadrao'
-  ClientHeight = 249
-  ClientWidth = 542
+  ClientHeight = 259
+  ClientWidth = 552
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -12,6 +13,7 @@ object FrmPadrao: TFrmPadrao
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96

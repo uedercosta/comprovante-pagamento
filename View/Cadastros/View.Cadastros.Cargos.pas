@@ -1,0 +1,78 @@
+unit View.Cadastros.Cargos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  View.Padrao.Cadastros, Data.DB, System.Actions, Vcl.ActnList, System.ImageList,
+  Vcl.ImgList, ACBrBase, ACBrEnterTab, Vcl.Grids, Vcl.DBGrids, JvExDBGrids,
+  JvDBGrid, Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TfrmCadCargos = class(TfrmCadastroSimples)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    procedure act_IncluirExecute(Sender: TObject);
+    procedure act_EditarExecute(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure edPesquisaInvokeSearch(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadCargos: TfrmCadCargos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  Repositorio.DataModulo, View.MenuPrincipal;
+
+procedure TfrmCadCargos.act_EditarExecute(Sender: TObject);
+begin
+  inherited;
+  DBEdit2.Setfocus;
+end;
+
+procedure TfrmCadCargos.act_IncluirExecute(Sender: TObject);
+begin
+  inherited;
+  DBEdit2.Setfocus;
+end;
+
+procedure TfrmCadCargos.edPesquisaInvokeSearch(Sender: TObject);
+begin
+  VAR_Comando:= TStringBuilder.Create;
+  VAR_Comando.Append('SELECT * FROM CARGOS ');
+  VAR_Comando.Append('WHERE ID_EMPRESA = ' + VAR_Empresa.ToString);
+  if cbbFiltro.ItemIndex = 0 then
+    begin
+      if Trim(edPesquisa.text) <> '' then
+        VAR_Comando.Append(' AND ID_CARGO = ' + edPesquisa.Text);
+    end
+  else
+    begin
+      if Trim(edPesquisa.text) <> '' then
+        VAR_Comando.Append(' AND UPPER(DESCRICAO) containing ' + QuotedStr(edPesquisa.Text));
+    end;
+  inherited;
+
+end;
+
+procedure TfrmCadCargos.FormShow(Sender: TObject);
+begin
+  VAR_Tabela:= 'CARGOS';
+  inherited;
+
+end;
+
+end.
+

@@ -33,9 +33,11 @@ object DM: TDM
     Left = 32
     Top = 104
     object QryEmpresasID_EMPRESA: TLargeintField
+      DisplayLabel = 'Id. Empresa'
       FieldName = 'ID_EMPRESA'
       Origin = 'ID_EMPRESA'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      DisplayFormat = '000000'
     end
     object QryEmpresasNOME: TStringField
       DisplayLabel = 'Nome Empresa'

@@ -1,7 +1,7 @@
-object Form2: TForm2
+object frmRecibos: TfrmRecibos
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'frmRecibos'
   ClientHeight = 478
   ClientWidth = 767
   Color = clBtnFace

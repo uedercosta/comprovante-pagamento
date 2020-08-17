@@ -77,6 +77,8 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
@@ -96,7 +98,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="View\View.MenuPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>frmMenu</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="View\Padrao\View.Padrao.pas">
@@ -109,7 +111,42 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Relatorios\Relatorio.ReciboPagamento.pas">
-            <Form>Form2</Form>
+            <Form>frmRecibos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.Login.pas">
+            <Form>frmLogin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Util\Util.UAssertionErro.pas"/>
+        <DCCReference Include="Util\Util.Utilitarios.pas"/>
+        <DCCReference Include="Util\Util.VerificaException.pas"/>
+        <DCCReference Include="View\Padrao\View.Padrao.CadastrosMasterDetail.pas">
+            <Form>frmMasterDetail</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Cadastros\View.Cadastros.Empresas.pas">
+            <Form>frmCadEmpresas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Cadastros\View.Cadastros.Funcionarios.pas">
+            <Form>frmCadFuncionario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Cadastros\View.Cadastros.Cargos.pas">
+            <Form>frmCadCargos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Cadastros\View.Cadastros.Eventos.pas">
+            <Form>frmCadEventos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.ListarRecibos.pas">
+            <Form>frmListaRecibos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\Padrao\View.Padrao.Cadastros.pas">
+            <Form>frmCadastroSimples</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -132,6 +169,12 @@
                 <Source>
                     <Source Name="MainSource">ComprovantePagamento.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k230.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp230.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k230.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp230.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="2">
                 <DeployFile LocalName="Win32\Debug\ComprovantePagamento.exe" Configuration="Debug" Class="ProjectOutput">
@@ -140,12 +183,27 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -499,27 +557,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

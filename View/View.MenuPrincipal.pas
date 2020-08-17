@@ -3,12 +3,12 @@ unit View.MenuPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList, Vcl.Menus,
-  Vcl.ComCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  System.Actions, Vcl.ActnList, Vcl.Menus, Vcl.ComCtrls, TFocusColor;
 
 type
-  TForm1 = class(TForm)
+  TfrmMenu = class(TForm)
     mmMenu: TMainMenu;
     act_Sistema: TActionList;
     act_CadEmpresa: TAction;
@@ -24,7 +24,6 @@ type
     act_CadUsuarios: TAction;
     act_Acessos: TAction;
     Utilitrios1: TMenuItem;
-    act_Logoff: TAction;
     act_TrocarSenha: TAction;
     act_Sair: TAction;
     actSair1: TMenuItem;
@@ -41,7 +40,15 @@ type
     Lanamentos1: TMenuItem;
     GeraoRecibos1: TMenuItem;
     ImpressodosRecibos1: TMenuItem;
+    EvFocusColor1: TEvFocusColor;
     procedure FormCreate(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure act_SairExecute(Sender: TObject);
+    procedure act_CadEmpresaExecute(Sender: TObject);
+    procedure act_CadCargoExecute(Sender: TObject);
+    procedure act_CadFuncionarioExecute(Sender: TObject);
+    procedure act_CadEventoExecute(Sender: TObject);
+    procedure act_ImpressaoRecibosExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,16 +56,64 @@ type
   end;
 
 var
-  Form1: TForm1;
-  VAR_TabEnter: Boolean;
+  frmMenu: TfrmMenu;
+  VAR_TabEnter, VAR_BuscarPorEmpresa: Boolean;
+  VAR_Usuario, VAR_Empresa: Integer;
+  VAR_Comando: TStringBuilder;
+  VAR_Tabela: string;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.FormCreate(Sender: TObject);
+uses
+  View.Login, Util.Utilitarios, View.Cadastros.Empresas, View.Cadastros.Cargos,
+  View.Cadastros.Funcionarios, View.Cadastros.Eventos, View.ListarRecibos;
+
+procedure TfrmMenu.act_CadCargoExecute(Sender: TObject);
 begin
-  VAR_TabEnter:= True;
+ PR_AbreForm(TfrmCadCargos, frmCadCargos);
+end;
+
+procedure TfrmMenu.act_CadEmpresaExecute(Sender: TObject);
+begin
+  PR_AbreForm(TfrmCadEmpresas,frmCadEmpresas);
+end;
+
+procedure TfrmMenu.act_CadEventoExecute(Sender: TObject);
+begin
+  PR_AbreForm(TfrmCadEventos,frmCadEventos);
+end;
+
+procedure TfrmMenu.act_CadFuncionarioExecute(Sender: TObject);
+begin
+PR_AbreForm(TfrmCadFuncionario, frmCadFuncionario);
+end;
+
+procedure TfrmMenu.act_ImpressaoRecibosExecute(Sender: TObject);
+begin
+  PR_AbreForm(TfrmListaRecibos,frmListaRecibos);
+end;
+
+procedure TfrmMenu.act_SairExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmMenu.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  if Application.MessageBox('Deseja sair do sistema ?', 'Informação', MB_YESNO + MB_ICONQUESTION) = IDYES then
+  begin
+    Application.Terminate;
+  end
+  else CanClose:= False;
+end;
+
+procedure TfrmMenu.FormCreate(Sender: TObject);
+begin
+  VAR_TabEnter := True;
+  VAR_BuscarPorEmpresa:=True;
 end;
 
 end.
+

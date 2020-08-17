@@ -1,0 +1,37 @@
+unit View.Cadastros.Eventos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, View.Padrao.Cadastros, Data.DB,
+  System.Actions, Vcl.ActnList, System.ImageList, Vcl.ImgList, ACBrBase,
+  ACBrEnterTab, Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, Vcl.StdCtrls,
+  Vcl.WinXCtrls, Vcl.ComCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls,
+  JvExStdCtrls, JvCombobox, JvDBCombobox;
+
+type
+  TfrmCadEventos = class(TfrmCadastroSimples)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    JvDBComboBox1: TJvDBComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadEventos: TfrmCadEventos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  Repositorio.DataModulo, View.MenuPrincipal;
+
+end.
